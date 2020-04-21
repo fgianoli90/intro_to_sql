@@ -1,15 +1,31 @@
-1. Display the top 20 rows In the employee table 
+# 1. Display the top 20 rows In the customer table
 
-2. Filter all the employees which are in the age group 20-30
+# select * from customer
+# limit 20;
 
-3. Show all the data from employees who are from Arizona, California, Texas or New Mexico
+# 2. Filter all the employees that have a credit limit between 100000 and 50000000
 
-4. Are there any employees who are from Florida 
+# select * from customer
+# where credit_limit > 100000 and credit_limit < 50000000;
 
-5. Select the top 3 employees with the highest salary 
+# 3. Show all the data from employees who are from USA, India, France or New Mexico
 
-6. Who is/are the youngest employees in the company 
+# select * from customer
+# where country in ('USA','India','New Mexico','France')
 
-7. Is Sam still working in the company 
+# 4. Are there any customers who are from China
 
-8. Who is the most senior employee in the company
+# select count(*) from customer
+# where country ='China'
+
+# 5. Select the top 3 employees with the highest credit limit
+
+#select * from customer 
+#order by credit_limit desc 
+#limit 3
+
+# 6. Is Joe Cruz in our database
+
+# select first_name, last_name
+# from customer
+# where first_name='Joe' and last_name="Cruz"
