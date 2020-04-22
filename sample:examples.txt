@@ -1,56 +1,63 @@
+//Get all information from table
 Select * from customer;
 
+//Get select information from table
 select FIRST_NAME, LAST_NAME, COUNTRY
 from customer;
 
+//Get select information and rename to column title to liking
 select first_name as name, LAST_NAME as family_name, COUNTRY as country
 from customer;
 
+//Get select information up to first 10 entries
 select first_name, country, credit_limit
 from customer
 limit 10;
 
+//Get select information from table; offset by 1 and get next 2
 select first_name, last_name, country 
 from customer
 limit 1, 2;
 
+//Get all info from table that have USA as country
 select * 
 from customer
 where country = 'USA';
 
-
+//Get all info from table that have USA or India as country
 select * 
 from customer
 where country = 'USA' or country = 'India';
 
-
+//Get all entries from table where credit limit is less then 5000000
 select * 
 from customer
 where credit_limit < 5000000;
 
+//Get all entries from table where credit limit is less then 5000000 and country is equal to USA
 select * 
 from customer
 where credit_limit < 5000000 and country = 'USA';
 
-
+//Get select information for entries from table where credit limit is less then 5000000 and country is equal to USA
 select first_name, last_name, credit_limit
 from customer
 where credit_limit < 5000000 and country = 'USA';
 
 
-
+//Get select information from table in descending order of credit_limit 
 select first_name, last_name, credit_limit
 from customer
 order by credit_limit desc;
 
 
-
+//Get select information from table in descending order of credit_limit where coutry equals USA or India
 select first_name, last_name, credit_limit
 from customer
 where country = 'USA' or country = 'India'
 order by credit_limit desc;
 
-
+//Get select information from table in descending order of credit_limit where coutry equals USA or India or France
 select first_name, last_name, credit_limit
 from customer
 where country in ('USA', 'India', 'France')
@@ -69,7 +76,4 @@ where country like '%a';
 select first_name, country, credit_limit
 from customer
 where country like 'a%a';
-
-
-
 
