@@ -4,14 +4,14 @@
 <p>Use <a href='https://www.db-fiddle.com'>DB Fiddle</a> for this lesson to practice SQL examples.</p>
 
 <ol>
-  <li>Copy and paste text from <a href='./webinar_intro_to_databases_sql.txt' >webinar_intro_to_databases_sql.txt</a> file into DB Fiddle with box title Schema SQL.
+  <li>Copy and paste text from SQL Database file from session folder into DB Fiddle with box title Schema SQL.
     
    <img src='/DB_SQL%20Table.PNG' width='700px' height='500px'/>
     
   </li>
-  <li>Use text from <a href='sample:examples.txt'>sample:examples.txt</a> as queries and paste queries into DB Fiddle with box title Query SQL.
+  <li>Use text from Example.txt file in session folder as queries and paste queries into DB Fiddle with box title Query SQL.
   
-  P.S: '#' means query is commented out and will not run
+  P.S: '#' means query is commented out and will not run. Uncomment one set of queries at a time to run.
   
   <img src='/Example%20SQL%20Queries.PNG' width='700px' height='500px'/>
   
