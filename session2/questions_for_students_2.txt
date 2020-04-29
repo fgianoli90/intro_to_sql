@@ -1,0 +1,47 @@
+# what are the highest salaries in each of the states
+
+# select address, max(salary) 
+# from Employee
+# group by address;
+
+# Give the names of the employees with the highest salary in each state. 
+# Arrange the names in an ascending order
+
+# select name, address, max(salary) 
+# from Employee
+# group by name, address
+# order by name asc;
+
+
+# For how many states , do we have the data available 
+
+# select count(distinct address)
+# from Employee;
+
+# what is the average salary of employees in the company 
+
+# select avg(salary) 
+# from Employee;
+
+
+# what is the average age of employees in each state
+
+# select address, avg(age) 
+# from Employee
+# group by address;
+
+# what is the average salary in Florida 
+
+# select address, avg(salary) 
+# from Employee
+# where address='Florida'
+# group by address;
+
+
+# What is the second highest salary for Florida
+
+# select salary
+# from Employee
+# where address='Florida'
+# order by salary desc
+# limit 1,1;
