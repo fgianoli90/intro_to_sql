@@ -1,0 +1,117 @@
+# More about how to use the where clause
+
+# Return all properties from customer table where the first name ends with d
+
+# select * from customer 
+# where first_name like '%d';
+
+# Return first and last name properties from customer table where the first name ends with d
+
+# select first_name, last_name
+# from customer 
+# where first_name like '%d';
+
+# Return first name all lowercase from customer table where the first name ends with d
+
+# select lower(first_name) 
+# from customer 
+# where first_name like '%d';
+
+# Return first name all uppercase from customer table where the first name ends with d
+
+# select upper(first_name) from customer 
+# where first_name like '%d';
+
+# Return first 3 letters of country for every entry from customer table
+
+# select substring(country,1,3)
+# from customer;
+
+# now if we want to standardize the result 
+# Return first 3 letters of country in Uppercase for every entry from customer table
+
+# select upper(substring(country,1,3))
+# from customer;
+
+# Concat first and last name to one string from customer table
+# select concat(first_name,' ', last_name) as fullname
+# from customer;
+
+# some other functions
+# LTRIM - remove all leading space from the left
+# RTRIM - remove all leading space from the right
+# TRIM - remove all unwanted characters from a string
+# LENGTH - get the length of the string
+# REPLACE - search a substring and replace it with another substring in a string
+# FORMAT - Round to fixed number of decimal places
+
+
+# select trim(first_name)
+# from customer;
+
+# Replace part of a string in country containing ndia and change to NDIA from table 
+
+# select replace(country, 'ndia','NDIA')
+# from customer;
+
+# group by & aggregations 
+
+# Returns the average credit limit of the group
+
+# select country, avg(credit_limit) 
+# from customer
+# group by country;
+
+# Returns the max credit limit of the group 
+
+# select country, max(credit_limit) 
+# from customer
+# group by country;
+
+# Returns the average credit limit of the group formatted to 2 decimal points
+
+# select country, format(avg(credit_limit),2) 
+# from customer
+# group by country;
+
+
+# other aggregate functions include sum, min, max, count 
+
+# Returns count of all entries
+
+# select count(*)
+# from customer;
+
+# Returns min credit limit for a country from customer table
+
+# select country, min(credit_limit) from customer
+# group by country;
+
+# Returns max credit limit for a country from customer table
+
+# select country, max(credit_limit) from customer
+# group by country;
+
+# Returns max credit limit (column titled MAXI) for a country and list countries-MAXI in descending order; can limit to show 1 country which will be highest max
+# to offset and show 2nd highest max one would put limit 1,1 <offset by 1 and show the next 1>
+
+# select country, max(credit_limit) as MAXI 
+# from customer
+# #where
+# group by country
+# order by MAXI desc
+# limit 1;
+
+
+
+# Check how many different countries are represented in the data
+# Counts unique number of countries in table (without duplicates)
+
+# select count (distinct country)
+# from customer;
+
+# returns average credit limit for a country from table
+
+# select country, avg(credit_limit)
+# from customer
+# group by country;
